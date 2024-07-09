@@ -1,9 +1,11 @@
 import streamlit as st
 import joblib
 import pandas as pd
+import os
 
-# Load the saved XGBoost model
-model = joblib.load('C:/Users/VAIBHAV/best_xgb_model.pkl')
+# Load the saved XGBoost model using a relative path
+model_path = os.path.join(os.path.dirname(__file__), 'best_xgb_model.pkl')
+model = joblib.load(model_path)
 
 # Function to make predictions
 def predict_default(input_data):
@@ -15,7 +17,7 @@ def predict_default(input_data):
 # Streamlit app
 st.title("Credit Risk Prediction App")
 
-# User inputs
+# User inputs (example fields)
 person_age = st.number_input("Enter person's age:", min_value=18, max_value=100, value=25)
 person_income = st.number_input("Enter person's income:", min_value=0.0, value=50000.0)
 loan_amnt = st.number_input("Enter loan amount:", min_value=0.0, value=10000.0)
