@@ -1,3 +1,8 @@
+joblib
+pandas
+xgboost
+streamlit
+
 gitdb==4.0.10
 GitPython==3.1.32
 google-auth==2.22.0
