@@ -4,7 +4,7 @@ import pandas as pd
 import os
 
 # Load the saved XGBoost model using a relative path
-model_path = os.path.join(os.path.dirname(__file__), 'best_xgb_model.pkl')
+model_path = os.path.join(os.path.dirname(__file__), 'best_xgb_model_smote.pkl')
 model = joblib.load(model_path)
 
 # Function to make predictions
