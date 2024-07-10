@@ -67,6 +67,6 @@ if st.button("Predict"):
 
     # Calculate Exposure at Default (EAD) and Expected Loss (EL)
     EAD = loan_amnt
-    EL = probability * EAD * LGD
+    EL = probability * EAD * LGD * 100
     st.write(f"Exposure at Default (EAD): {EAD}")
     st.write(f"Expected Loss (EL): {EL:,.2f}")
