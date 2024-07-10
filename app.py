@@ -69,4 +69,4 @@ if st.button("Predict"):
     EAD = loan_amnt
     EL = probability * EAD * LGD
     st.write(f"Exposure at Default (EAD): {EAD}")
-    st.write(f"Expected Loss (EL): {EL:,}")
+    st.write(f"Expected Loss (EL): {EL}")
